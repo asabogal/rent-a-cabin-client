@@ -1,10 +1,15 @@
 import React from 'react';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
+
+import Home from './pages/HomePage';
 
 function App() {
   return (
-    <div>
-
-    </div>
+    <BrowserRouter>
+      <Switch>  
+        <Route exact path='/' render={(props => <Home/>)}/>
+      </Switch>
+    </BrowserRouter>
   )
 }
 
